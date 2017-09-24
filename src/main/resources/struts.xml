@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="actions" extends="struts-default">
+        <action name="typequery" class="edu.cn.action.BookAction">
+            <result name="success">/book.jsp</result>
+        </action>
+        <action name="insert" class="edu.cn.action.BookAction" method="insert">
+            <result name="success">/inserts.jsp</result>
+            <result name="error">/insertf.jsp</result>
+        </action>
+        <action name="query" class="edu.cn.action.BookAction" method="query">
+            <result name="success">/querys.jsp</result>
+        </action>
+        <action name="update" class="edu.cn.action.BookAction" method="update">
+            <result name="success">/update_view.jsp</result>
+        </action>
+        <action name="update_r" class="edu.cn.action.BookAction" method="update_r">
+            <result name="success">/updates.jsp</result>
+            <result name="error">/updatef.jsp</result>
+        </action>
+        <action name="delete" class="edu.cn.action.BookAction" method="delete">
+            <result name="success">/deletes.jsp</result>
+            <result name="error">/deletef.jsp</result>
+        </action>
+    </package>
+</struts>
